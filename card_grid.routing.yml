@@ -1,0 +1,7 @@
+card_grid.card_grid:
+  path: '/card-grid'
+  defaults:
+    _controller: '\Drupal\card_grid\Controller\CardGridController::cardGrid'
+  methods: [GET]
+  requirements:
+    _access: 'TRUE'

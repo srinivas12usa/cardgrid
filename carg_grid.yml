@@ -1,0 +1,61 @@
+openapi: 3.0.1
+info:
+  title: cardGrid
+  description: cardGridTest
+  version: '0.1'
+servers:
+  - url: http://localhost
+paths:
+  /drupal-9.2.6/card-grid:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: columns
+          in: query
+          schema:
+            type: string
+          example: '3'
+        - name: rows
+          in: query
+          schema:
+            type: string
+          example: '8'
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: string
+                  meta:
+                    type: object
+                    properties:
+                      success:
+                        type: boolean
+                      message:
+                        type: string
+              examples:
+                '0':
+                  value: >-
+                    {"meta":{"success":false,"message":"Row count should be
+                    between 1 and 6"},"data":[]}
+                '1':
+                  value: >-
+                    {"meta":{"success":true,"cardCount":12,"uniqueCardCount":6,"uniqueCards":["T","Y","S","U","Q","O"]},"data":{"cards":[["T","U","O","Y"],["S","U","S","Q"],["Y","T","Q","O"]]}}
+                '2':
+                  value: >-
+                    {"meta":{"success":false,"message":"Either rows or columns
+                    needs to be an even number."},"data":[]}
+                '3':
+                  value: >-
+                    {"meta":{"success":false,"message":"Row count should be
+                    between 1 and 6"},"data":[]}
+      servers:
+        - url: http://localhost
+    servers:
+      - url: http://localhost

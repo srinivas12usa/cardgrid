@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - rest
+    - serialization
+  enforced:
+    module:
+      - card_grid
+id: get_card_shuffler_rest_resource
+plugin_id: get_card_shuffler_rest_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

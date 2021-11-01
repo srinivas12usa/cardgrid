@@ -1,0 +1,6 @@
+name: Card Grid
+type: module
+description: 'A code challenge module that provides an API Endpoint for building a memory game'
+package: Custom
+version: 9.x-1.0-alpha1
+core_version_requirement: ^8 || ^9
